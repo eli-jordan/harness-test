@@ -58,6 +58,19 @@ phases:
         templateExpressions: null
         templateVariables: ''
         timeoutMillis: 60000
+    - type: JENKINS
+      name: Jenkins test programmatic job
+      properties:
+        jenkinsConfigName: Jenkins
+        jobName: Testing/eli-programmatic-test
+        jobParameters:
+        - key: ELI_TEST_PARAM_1
+          value: foo
+        - key: ELI_TEST_PARAM_2
+          value: bar
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        timeoutMillis: 600000
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Verify Service
