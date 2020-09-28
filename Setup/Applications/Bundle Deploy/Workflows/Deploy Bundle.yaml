@@ -25,6 +25,15 @@ phases:
   phaseSteps:
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Deploy
+    steps:
+    - type: EMAIL
+      name: Email
+      properties:
+        body: Deployment of template bundle is starting
+        ccAddress: ''
+        ignoreDeliveryFailure: false
+        subject: Deployment is starting
+        toAddress: elias.jordan@tapad.com
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Verify Service
