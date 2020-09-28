@@ -34,6 +34,30 @@ phases:
         ignoreDeliveryFailure: false
         subject: Deployment is starting
         toAddress: elias.jordan@tapad.com
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        connectionType: SSH
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: true
+        scriptString: |-
+          echo "=================================================================="
+          env
+          echo "=================================================================="
+
+          export STATUS="Success"
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: STATUS
+        sweepingOutputScope: PIPELINE
+        tags: null
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Verify Service
