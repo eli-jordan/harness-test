@@ -28,25 +28,6 @@ phases:
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Verify Service
-    steps:
-    - type: SHELL_SCRIPT
-      name: Print version
-      properties:
-        commandPath: null
-        connectionAttributes: null
-        executeOnDelegate: true
-        host: null
-        outputVars: ''
-        publishAsVar: false
-        scriptString: 'echo "Bundle Version: ${artifact.buildNo}"'
-        scriptType: BASH
-        sshKeyRef: null
-        sweepingOutputName: null
-        sweepingOutputScope: null
-        tags: null
-        templateExpressions: null
-        templateVariables: ''
-        timeoutMillis: 60000
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Wrap Up
