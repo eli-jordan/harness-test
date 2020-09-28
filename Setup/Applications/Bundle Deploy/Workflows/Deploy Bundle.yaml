@@ -64,11 +64,6 @@ phases:
     stepsInParallel: false
   - type: CUSTOM_DEPLOYMENT_PHASE_STEP
     name: Wrap Up
-    steps:
-    - type: CUSTOM_DEPLOYMENT_FETCH_INSTANCES
-      name: Fetch Instances
-      properties:
-        stateTimeoutInMinutes: 1
     stepsInParallel: false
   provisionNodes: false
   serviceName: Bundle Deploy
