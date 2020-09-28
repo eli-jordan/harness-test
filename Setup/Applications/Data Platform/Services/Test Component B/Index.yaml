@@ -1,5 +1,12 @@
 harnessApiVersion: '1.0'
 type: SERVICE
 artifactType: ZIP
+configVariables:
+- name: dependencies
+  value: foo
+  valueType: TEXT
+- name: values
+  value: foo
+  valueType: TEXT
 deploymentType: CUSTOM
 deploymentTypeTemplateUri: Eli Jordan/GCP Projects
