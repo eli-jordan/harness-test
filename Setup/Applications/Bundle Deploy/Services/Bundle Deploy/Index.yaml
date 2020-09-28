@@ -2,6 +2,9 @@ harnessApiVersion: '1.0'
 type: SERVICE
 artifactType: ZIP
 configVariables:
+- name: values
+  value: foo
+  valueType: TEXT
 - name: dependencies
   value: foo
   valueType: TEXT
