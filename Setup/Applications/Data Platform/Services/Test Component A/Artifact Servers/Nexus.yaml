@@ -4,10 +4,7 @@ scripts:
 - customRepositoryMapping:
     artifactRoot: $.items
     buildNoPath: version
-  scriptString: |
-    export NEXUS_CREDENTIALS="eli-jordan:63b31e54a6fc5c65d9ce4e2bf781d8bb6c2ff611"
-
-    #/Users/elias.jordan/code/cloudcre10/scripts/mart-deployment/nexus_search.sh releases eli-test > "${ARTIFACT_RESULT_PATH}"
+  scriptString: |2
 
     echo '{ "items": [ { "version": "1.2.3" }, { "version": "2.3.4" } ] }' > "${ARTIFACT_RESULT_PATH}"
   timeout: '60'
